@@ -1,0 +1,225 @@
+
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>Bootstrap - Template</title>
+	
+	<!-- Link do css do Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+
+	<!-- Script do Jquery -->
+	<script type="text/javascript" src="bootstrap/js/jquery.js">
+	</script>
+
+	<!-- JavaScript do Bootstrap -->
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js">
+	</script>
+
+</head>
+<body>
+
+<div class="container">
+	<div class="row banner">
+		<!-- topo -->
+		<div class="col-md-12">
+			<nav class="navbar navbar-inverse">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="#">
+			        <i class="glyphicon glyphicon-book"></i>
+			        Lib's Power
+			      </a>
+			    </div>
+			    <p class="navbar-text navbar-right">
+
+			    <button class="btn btn-default btn-xs" data-toggle="modal" data-target="#myLogin">
+			    	<i class="glyphicon glyphicon-user"></i> 
+			    	 Login 
+				</button>	
+
+				<button class="btn btn-default btn-xs" data-toggle="modal" data-target="#myCadaster">
+			    	<i class="glyphicon glyphicon-plus"></i> 
+			    	 Cadastre-se 
+				</button>
+
+
+			    </p>
+			  </div>
+			</nav>
+		</div>
+	</div>
+
+	<div class="row content">
+		<!-- Menu -->
+		<div class="col-md-3">	
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Menu</h3>
+			  </div>
+			  <div class="panel-body">
+			  	<ul class="nav nav-pills nav-stacked">
+			  		<li>
+			  			<a href="Javascript:;">
+			  			<span class="glyphicon glyphicon-home"></span>
+			  			 Home
+			  			</a>
+			  		</li>
+
+			  		<li><a href="#">
+						<span class="glyphicon glyphicon-hand-up"></span> Pedido</a>
+					</li>
+
+					<li><a href="#">
+						<span class="glyphicon glyphicon-remove-circle"></span> Cancelar</a>
+					</li>
+
+					<li><a href="#">
+						<span class="glyphicon glyphicon-eye-open"></span> Ver Pedido</a>
+					</li>
+
+					<li><a href="#">
+						<span class="glyphicon glyphicon-usd"></span> Ver Financeiro</a>
+					</li>
+
+					<li><a href="#">
+						<span class="glyphicon glyphicon-print"></span> Relatórios </a>
+					</li>
+
+					<li><a href="#">
+						<span class="glyphicon glyphicon-off"></span> Sair </a>
+					</li>
+			  	</ul>
+			  </div>
+			</div>
+		</div>
+
+		<!-- Conteúdo -->
+		<div class="col-md-9">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Área de Informações</h3>
+			  </div>
+			  <div class="panel-body">
+			    Panel content
+			  </div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Footer -->
+	<div class="row">
+		<div class="col-md-12">
+			<nav class="navbar navbar-inverse">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="#">
+			        Desenvolvido por Anthony &reg; - 2017
+			      </a>
+			    </div>
+			  </div>
+			</nav>
+
+		</div>
+	</div>
+
+
+</div>
+
+
+</body>
+</html>
+
+<!-- Modal Login -->
+<div class="modal fade" id="myLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Login</h4>
+      </div>
+      <div class="modal-body">
+        <form>	
+        <label> Email: </label>
+        <input type="text" class="form-control">
+        <br>		
+
+        <label> Senha: </label><br>
+        <input type="password" class="form-control">
+        <br>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Fazer Login</button>
+    	</form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Cadastro -->
+<div class="modal fade" id="myCadaster" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Cadastre-se</h4>
+      </div>
+      <div class="modal-body">
+        <form action="" method="">	
+        <label> Nome Completo: </label>
+        <input type="text" class="form-control" placeholder="Digite seu nome" required>
+        <br>		
+
+        <label> Email: </label>
+        <input type="email" class="form-control" placeholder="Digite seu email" required>
+        <br>
+
+        <label> CPF: </label>
+        <input type="text" class="form-control" placeholder="Digite seu CPF" required maxlength="11">
+        <br>
+
+        <label> Data de Nascimento: </label>
+        <input type="date" class="form-control" placeholder="Digite sua Data" required>
+        <br>
+
+        <label> Cor Favorita: </label>
+        <input type="color" class="form-control" placeholder="Digite sua Data" required>
+        <br>
+
+        <label> Pergunta Secreta: </label>
+        <input type="hidden" class="form-control" placeholder="Digite sua Data" required value="O que eu fiz no verão passado?">
+        <br>
+
+        <label> Sexo: </label><br>
+        M <input type="radio" name="sexo" value="Masculino" required> 
+        F <input type="radio" name="sexo" value="Feminino">
+        <br><br>
+
+        <label> Endereço Completo: </label><br>
+        <textarea placeholder="Digite seu Endereço" class="form-control"></textarea>
+
+        <label> Escolaridade: </label><br>
+        <select class="form-control">
+        	<option disabled selected> -- Selecione --</option>
+        	<option> Fundamental </option>
+        	<option> Médio </option>
+        	<option> Superior </option>
+        </select>
+        <br><br>
+
+        <label> Termos de Licença: </label><br>
+        <input type="checkbox" value="SIM"> SIM
+        <input type="checkbox" value="NAO"> Não 
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        <button type="submit" class="btn btn-primary">Fazer Cadastro</button>
+    	</form>
+      </div>
+    </div>
+  </div>
+</div>
