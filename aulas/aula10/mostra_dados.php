@@ -14,12 +14,6 @@ $senha_Wallison 	= sha1("1234");
 $dt_nsac_Wallison 	= "04/12/1992";
 $endereco_Wallison 	= "Rua 2, Montese ";
 
-//Wallison
-$name_Wallison 		= "Wallison";
-$email_Wallison 	= "Wallison@gmail.com";
-$senha_Wallison 	= sha1("1234");
-$dt_nsac_Wallison 	= "04/12/1992";
-$endereco_Wallison 	= "Rua 2, Montese ";
 
 ?>
 <!DOCTYPE html>
