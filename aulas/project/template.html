@@ -1,0 +1,151 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><?= $title ?></title>
+  <!-- Link do CSS do Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+  <!-- FONT AWESOME -->
+  <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+  <!-- script do jquery -->
+  <script type="text/javascript" src="assets/js/jquery.js"></script>
+  <!-- script do javascript do bootstrap -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <!-- Topo -->
+    <div class="row">
+        <div class="col-md-12">
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="col-md-6">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                  <i class="fa fa-cutlery"></i> Craft-Pizzas 
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="navbar-text navbar-right btn-group btn-group-sm " role="group" aria-label="Large button group">
+                  <button class="btn btn-primary bnt-xs " data-toggle="modal" data-target="#myModalLogin">
+                    <i class="fa fa-user"></i>
+                    Login
+                  </button>
+              </div>
+            </div>
+           
+          </div>
+        </nav>
+      </div>
+    </div>
+  <!-- End Topo -->
+
+  <!-- Body -->
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Área do Usuário</h3>
+            </div>
+              <div class="panel-body">
+                <ul class="nav nav-pills nav-stacked">
+                  <li>
+
+                    <a href="#"><span class="fa fa-home"> Home</span></a>
+
+                  </li>
+                  <li>
+                    <a href="#"><span class="fa fa-hand-paper-o"> Pedido</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span class="fa fa-trash"> Excluir - Pedido</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span class="fa fa-clock-o"> Horário</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span class="fa fa-print"> Relatório</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span class="fa fa-user"> Usuário</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span class="fa fa-power-off"> Sair</span></a>
+                  </li>   
+                </ul>
+              </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-8">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Área do Usuário</h3>
+            </div>
+              <div class="panel-body">
+                Panel content
+              </div>
+        </div>
+      </div>
+
+    </div>
+  <!-- End Body -->
+
+  <!-- Footer -->
+    <div class="row"></div>
+    <div class="col-mod-12">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+              Desenvolvido por Wallison &reg; - <?=date("Y")?>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  <!-- End Footer -->
+
+</div>
+</body>
+</html>
+
+<!-- Modal Loogin -->
+<div class="modal fade" id="myModalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"> <i class="fa fa-user"></i>Login</h4>
+      </div>
+      <form action="" method=""><!-- FORM -->
+        <div class="modal-body">
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon" id="email-ico"><span class="fa fa-envelope" aria-hidden=true></span></span>
+              <input type="email" class="form-control" placeholder="Email" id="recipient-name" aria-describedby="email-ico">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon" id="senha-ico"><span class="fa fa-pencil" aria-hidden=true></span></span>
+              <input type="password" class="form-control" placeholder="Senha" id="recipient-name" aria-describedby="senha-ico">
+            </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Fazer Login</button>
+      </div>
+    </form><!-- END FORM -->
+    </div>
+  </div>
+</div>
+<!-- End Modal Loogin -->
