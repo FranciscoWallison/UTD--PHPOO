@@ -1,0 +1,33 @@
+
+                <ul class="nav nav-pills nav-stacked">
+                  <li>
+
+                    <a href="#"><span class="fa fa-home"> Home</span></a>
+
+                  </li>
+                  <li>
+                    <a href="#"><span class="fa fa-hand-paper-o"> Pedido</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span class="fa fa-trash"> Cancelar</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span class="fa fa-clock-o"> Horário</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span class="fa fa-print"> Ver Financeiro</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span class="fa fa-user"> Relatórios</span></a>
+                  </li>
+                  <?php 
+                    if(isset($_SESSION)){
+                    ?>
+                      <li>
+                        <a href="logout.php"><span class="fa fa-power-off"> Sair</span></a>
+                      </li>
+                  <?php 
+                    }    
+                  ?>
+                </ul>
+         

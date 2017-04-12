@@ -1,5 +1,12 @@
 <?php
 
-$page_title = "Pagina do Admin";
+	//Starta a sessão
+	session_start();
 
-include_once 'template.html';
+	if(!isset($_SESSION['admin'])){
+		header('location: index.php');
+	}
+
+	$page_title = "Pagina do Admin";
+
+	include_once 'template.html';
