@@ -5,6 +5,7 @@
 
 	//destruindo a sessão
 	session_destroy();
+	
 	//redirecionado para o formulário
-	header("location: index.php?success=session_ending");
+	header("location: index.php?success=ending_session");
 ?>

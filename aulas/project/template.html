@@ -1,3 +1,9 @@
+<?php
+
+  //Starta a sessão
+  session_start();
+?>
+
 <html>
 <head>
   <meta charset="utf-8">
@@ -7,6 +13,8 @@
   <!-- Link do CSS do Bootstrap -->
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 
+
+  
   <!-- script do jquery -->
   <script type="text/javascript" src="bootstrap/js/jquery.js"></script>
   <!-- script do javascript do bootstrap -->
@@ -33,10 +41,26 @@
             <div class="col-md-6">
               <div class="navbar-text navbar-right btn-group btn-group-sm " role="group" aria-label="Large button group">
                 <?php 
-                    if(isset($_SESSION)){
+                    if(isset($_SESSION['admin']) || isset($_SESSION['functionary']) ){
                     ?>
+                      <?php
+                        if(isset($_SESSION['admin'])){
+                      ?>
+                        <div class=""><?= $_SESSION['admin']['name'] ?></div>
+                      <?php
+                        }elseif(isset($_SESSION['functionary']) ){
+                      ?>
+                        <div class=""><?= $_SESSION['functionary']['name'] ?></div>
+                      <?php
+                        }
+                      ?>
+                      
+               
+                        <a href="" class="btn btn-primary bnt-xs ">
+                          <span class="fa fa-user">perfil</span> 
+                        </a>
                         <a href="logout.php" class="btn btn-primary bnt-xs ">
-                          <span class="fa fa-power-off"></span> Sair
+                          <span class="fa fa-power-off"> Sair</span>
                         </a>
                   <?php 
                     }else{
@@ -69,7 +93,7 @@
               <div class="panel-body">
                 <?php 
                   //testa se existe uma sessão
-                  if(!isset($_SESSION)){
+                   if( !(isset($_SESSION['admin']) || isset($_SESSION['functionary'])) ){
                     //Se não existir sessão inclui o login
                     include_once 'login.html';
                   }else{
@@ -114,6 +138,15 @@
   <!-- End Footer -->
 
 </div>
+
+  <script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+      $('#myTable').DataTable();
+  });
+</script>
+
 </body>
 </html>
 

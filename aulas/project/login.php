@@ -9,9 +9,8 @@
 
 	//TESTA O LOGIN
 	foreach ($person_db as $accounts){
-
 		//validar usuariio email
-		if (ucfirst(strtolower($accounts['email'])) == $email){
+		if (ucfirst(strtolower($accounts['email'])) === $email){
 			//validar usuariio senha
 			if ($accounts['password'] == sha1($password)  ){
 

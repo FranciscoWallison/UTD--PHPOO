@@ -4,11 +4,11 @@
 </head>
 <body>
 <form ction="#" method="POST">
-            <input type="text" name="name" placeholder="Nome">
-            <input type="text" name="idade" placeholder="idade">
-            <input type="text" name="email" placeholder="email">
-            <input type="submit">
-        </form>
+    <input type="text" name="name" placeholder="Nome">
+    <input type="text" name="idade" placeholder="idade">
+    <input type="text" name="email" placeholder="email">
+    <input type="submit">
+</form>
 </body>
 </html>
 <?php
