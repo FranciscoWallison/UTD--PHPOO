@@ -12,7 +12,6 @@
                   </li>
 <?php
     if(isset($_SESSION['admin'])){
-
 ?>
 
                   <li>
@@ -22,30 +21,21 @@
                   <li>
                     <a href="#"><span class="fa fa-print"> Relatorios</span></a>
                   </li>
-                  <li>
-                    <a href="?option=creat_order"><span class="fa fa-clock-o"> Cadastrar Pedido </span></a>
-                  </li>
-    
-
+                                
 <?php 
   }elseif(isset($_SESSION['functionary'])){
 ?>
-
                   <li>
-                    <a href="#"><span class="fa fa-hand-paper-o"> Pedido</span></a>
+                    <a  href="?option=listPedidos"><span class="fa fa-hand-paper-o"> Pedidos</span></a>
                   </li>
                   <li>
-                    <a href="#"><span class="fa fa-trash"> Cancelar</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span class="fa fa-clock-o"> Horário</span></a>
-                  </li>
-              
-
+                    <a href="#"><span class="fa fa-clock-o">Pedidos Entreges</span></a>
+                  </li>    
 <?php 
   }
       
 ?>
+                  
                   <li>
                       <a href="logout.php"><span class="fa fa-power-off"> Sair</span></a>
                   </li>

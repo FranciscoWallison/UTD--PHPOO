@@ -25,6 +25,11 @@
 					include_once "functionaryList.php";
 				break;
 
+			case 'listPedidos':
+				//carregando o template cadastrar pedido
+				include_once "listPedidos.php";
+			break;
+
 			case 'creat_order':
 				//carregando o template cadastrar pedido
 				include_once "creatOrder.php";

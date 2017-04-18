@@ -1,35 +1,32 @@
 
-<form ction="creatOrder.php" method="POST">
-    <input type="text" name="typePizza" placeholder="Tipo da pizza">
-    <input type="text" name="amountPizza" placeholder="Quantidade">
-    <input type="text" name="sizePizza" placeholder="Tamanho">
-    <input type="submit">
+<form action="insertPedidoPizza.php" class="bs-example bs-example-form" method="POST">
+	<div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Tipo</button>
+      </span>
+      <input type="text" class="form-control" name="typePizza" placeholder="Tipo da pizza">
+    </div><!-- /input-group -->
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Quantidade</button>
+      </span>
+      <input type="text" class="form-control" name="amountPizza" placeholder="Quantidade">
+    </div><!-- /input-group -->
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Tamanho</button>
+      </span>
+      <input type="text" class="form-control" name="sizePizza" placeholder="Tamanho">
+    </div><!-- /input-group -->
+    
+	<hr>
+	
+		<input  class="form-control btn btn-success" value="Confirma!" type="submit">
+   
 </form>
+<a  class="form-control btn btn-primary" href="?option=listPedidos">
 
-<?php
-if(isset($_POST['typePizza']) && isset($_POST['amountPizza']) && isset($_POST['sizePizza']))
-{
-	$typePizza 	= $_POST['typePizza'];
-	$amountPizza 	= $_POST['amountPizza'];
-	$sizePizza 	= $_POST['sizePizza'];
-	//Criando um arquivo com o php
-	$arquivo = fopen("cadastroPedido.txt", "a+");
+	<i class=""></i>
+	voltar!
 
-	//Escrevo dentro do arquivo
-	fwrite($arquivo,
-		/*
-		"--------------------------------\n".
-	 	"|	Name 	= 	".$name."  		\n".
-	 	"|	Idae 	= 	".$idade." 		\n".
-	 	"|	E-mal 	= 	".$email." 		\n".
-	 	"--------------------------------\n"
-	 	*/
-	 	$typePizza." - ".$amountPizza." - ".$sizePizza."\n"
-	 );
-
-	//fecho o arquivo
-	fclose($arquivo);
-
-	echo "Gravado!";
-}
-?>
+</a>
