@@ -1,7 +1,7 @@
 
 <?php 
     //pegando os dados do arquivos
-    $data = file("cadastroPedido.txt");
+    $data = file("cadastropedido.txt");
     foreach ($data as $key => $value) {
         $pedidos_db[] =  explode(" - ",$value);
     }
@@ -25,15 +25,14 @@
                     
                     ?>
                              <tr class="paciente" id="primeiro-paciente">
-                                <th scope="row">#</th>
-                                <td class="info-peso"><?=$pedidos[0]?></td>
+                                <th scope="row"><?=$pedidos[0]?></th>
                                 <td class="info-peso"><?=$pedidos[1]?></td>
                                 <td class="info-peso"><?=$pedidos[2]?></td>
                                 <td class="info-peso"><?=$pedidos[3]?></td>
+                                <td class="info-peso"><?=$pedidos[4]?></td>
                                 <td class="info-altura">
-                                     <button type="button" class="btn btn-warning btn-xs" data-placement="bottom" title="Editar"><span class="fa fa-pencil-square-o" aria-hidden="true"></span> </button>
-                                     <button type="button" class="btn btn-danger btn-xs" data-placement="bottom" title="Cancelar" ><span class="fa fa-trash" aria-hidden="true"></span> </button>
-
+                                     <a href="" class="btn btn-warning btn-xs" data-placement="bottom" title="Editar"><span class="fa fa-pencil-square-o" aria-hidden="true"></span> </a>
+                                     <a href="" class="btn btn-danger btn-xs" data-placement="bottom" title="Cancelar" ><span class="fa fa-trash" aria-hidden="true"></span> </a>
                                 </td>
                             </tr>        
                     <?php

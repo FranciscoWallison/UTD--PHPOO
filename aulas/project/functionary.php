@@ -14,6 +14,8 @@
 	{
 		
 		//rederixamdp a opção
+		validate_error();
+		validate_success();
 		validade_option();
 
 	}

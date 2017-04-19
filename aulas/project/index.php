@@ -1,5 +1,8 @@
 <?php
 
+	//incluindo arquivo de validação
+	include_once "validate.php";
+
 	//Starta a sessão
 	session_start();
 
@@ -19,6 +22,8 @@
 	function page_content()
 	{
 		//carregando o template de boas vindas
+		validate_error();
+		validate_success();
 		include_once "welcome.html";
 	}
 	
