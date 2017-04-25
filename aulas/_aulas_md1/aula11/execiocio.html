@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<div class=" container ">
+	<form action="date_execiocio.php" method="POST"><!-- FORM -->
+
+        <div class="modal-body">
+          	<label for="inputNomeCompleto"> Nome Completo </label><br>
+            	<input type="text" name="name" id="inputNomeCompleto" placeholder="Digite seu nome" class="form-control" required maxlength="22"><br>	
+
+            <label for="inputEmail"> Email: </label><br>
+            	<input type="email" name="email" id="inputEmail" placeholder="Digite seu email" class="form-control" required><br>
+
+            <label for="inputDataNascimento"> Data do Nasccimento: </label><br>
+            	<input type="date" name="birth" id="inputDataNascimento" placeholder="Digite data do nascimento" class="form-control" required><br>
+
+ 
+            <label for="inputEndereco"> Endereço </label><br>
+              <textarea id="inputEndereco" name="address"  placeholder="Digite seu Endereço" class="form-control" required></textarea><br> 
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+          <button type="submit" class="btn btn-primary">Fazer Cadastro</button>
+        </div>
+
+      </form><!-- END FORM -->
+      </div>
+
+      	<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

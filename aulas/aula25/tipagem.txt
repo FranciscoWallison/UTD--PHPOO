@@ -1,0 +1,22 @@
+//Tipo string para banco de dados
+VARCHAR(255) - 'ele varia de 0 a 255 caracteres,
+				e irá armazenar apenas a quantidade do valor do registro';
+
+CHAR(255) - 'ele varia de 0 a 255 caracteres Porem quando definido,
+			ele irá armazenar a quantidade definida.';
+
+TEXT(999) -
+BLOB(999) - 
+
+
+INT(11) - 'Tipo numerico que varia de 1 posição a 11 posições. O tipo INT 
+			leva a quantidade definida para ele.'
+
+FLOAT - 
+DOUBLE - 
+
+DATE - "Tipo de data - YYYY-DD-MM";
+TIMESTAMP - "Guarda a data e hoŕario no formato
+			 : YYYY-DD-MM HH::II:SS ";
+
+TIMESTAMP (CURRENT_TIMESTAMP); 

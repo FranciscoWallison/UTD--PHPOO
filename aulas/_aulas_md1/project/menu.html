@@ -1,0 +1,43 @@
+ <?php 
+ //Starta a sessão
+  session_start();
+
+?>
+
+                <ul class="nav nav-pills nav-stacked">
+                  <li>
+
+                    <a href="?option=home"><span class="fa fa-home"> Home</span></a>
+
+                  </li>
+<?php
+    if(isset($_SESSION['admin'])){
+?>
+
+                  <li>
+                    <a href="?option=list_functionary"><span class="fa fa-id-card"> Funcionarios</span></a>
+                  </li>
+
+                  <li>
+                    <a href="#"><span class="fa fa-print"> Relatorios</span></a>
+                  </li>
+                                
+<?php 
+  }elseif(isset($_SESSION['functionary'])){
+?>
+                  <li>
+                    <a  href="?option=listPedidos"><span class="fa fa-hand-paper-o"> Pedidos</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span class="fa fa-clock-o">Pedidos Entreges</span></a>
+                  </li>    
+<?php 
+  }
+      
+?>
+                  
+                  <li>
+                      <a href="logout.php"><span class="fa fa-power-off"> Sair</span></a>
+                  </li>
+  </ul>
+         

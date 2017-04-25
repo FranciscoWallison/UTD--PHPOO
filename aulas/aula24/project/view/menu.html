@@ -1,0 +1,104 @@
+<ul class="nav nav-pills nav-stacked">
+<?php
+	//startando a sessão
+	session_start();
+
+	//Criando as opções de menu para o admin
+	if(isset($_SESSION['admin'])){
+?>
+	<li>
+		<a href="?option=home">
+		<span class="fa fa-home"></span>
+		 Home
+		</a>
+	</li>
+
+	<li>
+		<a href="?option=list_functionaries">
+		<span class="fa fa-id-card"></span> Funcionários
+		</a>
+	</li>
+
+	<li>
+		<a href="?option=list_books">
+		<span class="fa fa-book"></span>
+		Livros
+		</a>
+	</li>
+	
+
+	<li>
+		<a href="?option=book_emprest">
+		<span class="fa fa-handshake-o"></span>
+		Emprestar Livro
+		</a>
+	</li>
+
+	<li>
+		<a href="?option=devolutions">
+		<span class="fa fa-retweet"></span>
+		Devoluções
+		</a>
+	</li>
+
+	<li>
+		<a href="?option=relatories">
+		<span class="fa fa-print"></span>
+		Relatórios
+		</a>
+	</li>
+
+	<li>
+		<a href="logout.php">
+		<span class="fa fa-power-off"></span>
+		Sair 
+		</a>
+	</li>
+
+<?php 
+	}//fechando o if das opçoes de admin
+	elseif(isset($_SESSION['functionary'])) {
+?>	
+	<li>
+		<a href="?option=home">
+		<span class="fa fa-home"></span>
+		Home 
+		</a>
+	</li>
+
+	
+	<li>
+		<a href="?option=list_books">
+		<span class="fa fa-book"></span>
+		Livros 
+		</a>
+	</li>
+
+	<li>
+		<a href="#">
+		<span class="fa fa-handshake-o"></span>
+		Emprestar Livro
+		</a>
+	</li>
+
+	<li>
+		<a href="#">
+		<span class="fa fa-retweet"></span>
+		Devoluções
+		</a>
+	</li>
+
+	<li>
+		<a href="logout.php">
+		<span class="fa fa-power-off"></span>
+		Sair 
+		</a>
+	</li>
+
+
+<?php
+	}
+?>
+
+
+</ul>

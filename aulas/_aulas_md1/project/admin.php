@@ -1,0 +1,26 @@
+<?php
+
+	//carregando o template de validação
+	include_once "validate.php";
+
+	//Starta a sessão
+	session_start();
+
+	if(!isset($_SESSION['admin'])){
+		header('location: index.php');
+	}
+
+	function page_content()
+	{
+		
+		//rederixamdp a opção
+		validate_error();
+		validate_success();
+		validade_option();
+
+	}
+	
+
+	$page_title = "Pagina do Admin";
+
+	include_once 'template.html';

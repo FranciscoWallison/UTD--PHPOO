@@ -1,0 +1,33 @@
+<table class="table table-bordered">
+	<th>Nome</th>
+	<th>Autor(a)</th>
+	<th>Editora</th>
+	<th>Genero</th>
+	<th>Ações</th>
+
+<?php  
+	//inclui o banco de dados dos livros
+	$books = file("model/db_book.txt");
+
+	foreach($books as $key_book=>$book){
+		
+		$book = explode(" - ", $book);
+		echo "<tr>";
+		foreach ($book as $key => $value) {
+			echo "<td>".$value."</td>";
+		}
+		echo "<td>";
+					echo '<a class="btn btn-warning btn-xs" href="?option=update_book&filter='.$key_book.'">
+							<i class="fa fa-pencil">
+							</i>
+						</a> ';
+					echo '<a class="btn btn-danger btn-xs" href="delete_book.php?filter='.$key_book.'">
+							<i class="fa fa-trash">
+							</i>
+						</a>';
+				echo "</td>";
+
+		echo "</tr>";
+	}
+?>
+</table>	

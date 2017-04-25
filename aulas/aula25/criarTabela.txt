@@ -1,0 +1,93 @@
+
+-- LOJA
+-- DROP DATABASE `mercadinho`;
+CREATE DATABASE `mercadinho`;
+use `mercadinho`;
+CREATE TABLE `produtos` (
+	`codigoProduto` INT(4),
+	`preco` FLOAT,
+	`nome` VARCHAR(255),
+	`data_de_validade` DATE,
+	`tipoProduto` VARCHAR(255),
+	`descricao` VARCHAR(255),
+	`nome_de_fornecedor` VARCHAR(255)
+);
+CREATE TABLE `estoque` (
+	`codigoEstoque` INT(4),
+	`quantidade` INT(4),
+	`categoria` VARCHAR(255),
+	`nome_do_produto` VARCHAR(255)
+);
+CREATE TABLE `clientes` (
+	`codigoClientes` INT(4),
+	`nome` VARCHAR(255),
+	`endereco` VARCHAR(255),
+	`cpf` VARCHAR(255),
+	`contato` VARCHAR(255),
+	`email` VARCHAR(255),
+	`cliente_desde` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	`sexo` CHAR(2)
+);
+CREATE TABLE `fincionarios`(
+	`matricula` VARCHAR(255),
+	`nome` VARCHAR(255),
+	`email` VARCHAR(255),
+	`contato` VARCHAR(255),
+	`salario` FLOAT,
+	`admissao` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+);
+CREATE TABLE `fornecedores`(
+	`cnpj` VARCHAR(255),
+	`nome` VARCHAR(255),
+	`email` VARCHAR(255),
+	`contato` VARCHAR(255),
+	`endereco` VARCHAR(255),
+	`tipo` VARCHAR(255)
+);
+
+
+
+Produtos;
+	 ->codigoProduto INT(4);
+	 ->preco FLOAT;
+	 ->nome VACHAR(255);
+	 ->data_de_validade DATE;
+	 ->tipoProduto VACHAR(255);
+	 ->descricao VACHAR(255);
+	 ->nome_de_fornecedor VACHAR(255);
+
+Estoque;
+	 ->codigoEstoque INT;
+	 ->quantidade INT;
+	 ->categoria VACHAR(255);
+	 ->nome_do_produto VACHAR(255);
+
+Clientes;
+	->codigoClientes INT,
+	->nome VACHAR(255),
+	->endereco VACHAR(255),
+	->cpf VACHAR(255),
+	->contato VACHAR(255),
+	->email VACHAR(255),
+	->cliente_desde TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	->sexo CHAR,
+
+
+
+Fincionarios;
+	->matricula VACHAR(255);
+	->nome VACHAR(255);
+	->email VACHAR(255);
+	->contato VACHAR(255);
+	->salario FLOAT,
+	->admissao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+
+Fornecedores;
+	->cnpj  VACHAR(255);
+	->nome  VACHAR(255);
+	->email  VACHAR(255);
+	->contato  VACHAR(255);
+	->endereco  VACHAR(255);
+	->tipo  VACHAR(255)
