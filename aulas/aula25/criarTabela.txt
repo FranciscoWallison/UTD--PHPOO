@@ -1,8 +1,8 @@
 
 -- LOJA
 -- DROP DATABASE `mercadinho`;
-CREATE DATABASE `mercadinho`;
-use `mercadinho`;
+CREATE DATABASE `mercadinhoDoChic`;
+use `mercadinhoDoChic`;
 CREATE TABLE `produtos` (
 	`codigoProduto` INT(4),
 	`preco` FLOAT,
@@ -19,12 +19,24 @@ CREATE TABLE `estoque` (
 	`nome_do_produto` VARCHAR(255)
 );
 CREATE TABLE `clientes` (
-	`codigoClientes` INT(4),
+	`codigoCliente` INT(4),
 	`nome` VARCHAR(255),
 	`endereco` VARCHAR(255),
 	`cpf` VARCHAR(255),
 	`contato` VARCHAR(255),
 	`email` VARCHAR(255),
+	`cliente_desde` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	`sexo` CHAR(2)
+);
+CREATE TABLE `funcionarios` (
+	`codigoFuncionario` INT(4),
+	`nome` VARCHAR(255),
+	`endereco` VARCHAR(255),
+	`cpf` VARCHAR(255),
+	`contato` VARCHAR(255),
+	`email` VARCHAR(255),
+	`data_admicao` TIMESTAMP,
+	`salario` float,
 	`cliente_desde` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	`sexo` CHAR(2)
 );
