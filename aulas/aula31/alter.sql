@@ -1,0 +1,1 @@
+ALTER TABLE `tb_registers` ADD COLUMN `registers_pass` VARCHAR(255) AFTER `register_email`;
