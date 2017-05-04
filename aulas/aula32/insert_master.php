@@ -26,8 +26,8 @@
 	//3º parte query
 	$query .= "'$values')";
 
-	//enviar para o banco de dados!
-	$result = mysqli_query($con, $query) or die(mysqli_error($con));
+//enviar para o banco de dados!
+	$result = mysqli_query($connect, $query) or die(mysqli_error($connect));
 
 	if($result){
 		header("location: form.html?success=insert_ok");
